@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import Button from '../components/BaseButton/BaseButton.vue';
 import ChatRoom from '../modules/ChatRoom/ChatRoom.vue';
-const toggle = ref(true);
+const toggle = ref(false);
 
 function handleToggle() {
   toggle.value = !toggle.value;
@@ -16,8 +16,14 @@ const closeChatRoom = () => {
   <div class="main-layout">
     <ChatRoom :open="toggle" @close="closeChatRoom" />
     <div class="toggle-button">
-      <Button size="md" variant="primary" label="Ask Natria AI" @click="handleToggle">
-        <i class="fa-solid fa-chevron-right"></i>
+      <Button
+        size="md"
+        variant="primary"
+        label="Ask Natria AI"
+        @click="handleToggle"
+        :style="{ background: '#FB7429', color: '#fff' }"
+      >
+        <img src="/icons/duotone.svg" width="16px" height="16px" />
       </Button>
     </div>
   </div>
@@ -33,6 +39,6 @@ const closeChatRoom = () => {
 .toggle-button {
   position: absolute;
   bottom: 30px;
-  right: 15%;
+  right: 5px;
 }
 </style>

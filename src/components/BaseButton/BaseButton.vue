@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { CSSProperties } from 'vue';
 import type { ButtonVariant, ButtonSize } from './BaseButton.types';
 
 const props = defineProps<{
@@ -7,6 +8,7 @@ const props = defineProps<{
   size?: ButtonSize;
   disabled?: boolean;
   loading?: boolean;
+  style?: CSSProperties;
 }>();
 
 const emit = defineEmits<{
@@ -15,6 +17,7 @@ const emit = defineEmits<{
 </script>
 <template>
   <button
+    :style="props.style"
     :disabled="props.disabled || props.loading"
     @click="emit('click', $event)"
     class="base-btn"

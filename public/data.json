@@ -7,6 +7,7 @@
       "products": [
         {
           "id": "glove_sensicare_pi_green_6_0",
+          "name": "GLOVE SURG SENSICARE PI GRN LF PF 6.0",
           "price": 452.59,
           "vendor": "Medline",
           "brand": "MEDLINE",
@@ -23,6 +24,7 @@
         },
         {
           "id": "ansell_micro_touch_nitratex_medium",
+          "name": "ANSELL MICRO-TOUCH NITRATEX STERILE EXAM GLOVES - Medium",
           "price": 184.6,
           "vendor": "Primis",
           "brand": "Ansell",
@@ -39,6 +41,7 @@
         },
         {
           "id": "ventyv_select_5_0_latex_manatee_xl",
+          "name": "VENTYV SELECT 5.0 NATURAL LATEX EXAM GLOVES (MANATEE)",
           "price": 58.91,
           "vendor": "Primis",
           "brand": "VENTYV",
@@ -55,6 +58,7 @@
         },
         {
           "id": "cardinal_positive_touch_latex_medium",
+          "name": "CARDINAL HEALTH POSTIVE TOUCH LATEX EXAM GLOVES",
           "price": 128.93,
           "vendor": "Primis",
           "brand": "Cardinal Health",
@@ -71,6 +75,7 @@
         },
         {
           "id": "curad_pf_lg",
+          "name": "GLOVE EXAM LATEX CURAD PF LG",
           "price": 15.59,
           "vendor": "Medline",
           "brand": "MEDLINE",
@@ -95,6 +100,7 @@
       "products": [
         {
           "id": "aquasonic_100_1l",
+          "name": "Aquasonic 100 Ultrasound Transmission Gel",
           "price": 12.5,
           "vendor": "Parker Laboratories",
           "brand": "Aquasonic",
@@ -111,6 +117,7 @@
         },
         {
           "id": "ecovue_250ml",
+          "name": "EcoVue Ultrasound Gel",
           "price": 10.0,
           "vendor": "HR Pharmaceuticals",
           "brand": "EcoVue",
@@ -127,6 +134,7 @@
         },
         {
           "id": "therapro_5l",
+          "name": "TheraPro Ultrasound Gel",
           "price": 15.0,
           "vendor": "TheraPro",
           "brand": "TheraPro",
@@ -151,6 +159,7 @@
       "products": [
         {
           "id": "fao_pvp_iodine_swabs_100bx",
+          "name": "FIRST AID ONLY/ACME UNITED ANTISEPTICS, CREAMS & OINTMENTS - PVP Iodine Swabs, 100/bx",
           "price": 51.64,
           "vendor": "Primis",
           "brand": "First Aid Only / Acme United",
@@ -175,6 +184,7 @@
       "products": [
         {
           "id": "sklar_iris_scissors_curved_4_5",
+          "name": "SKLAR REUSEABLE SURGICAL INSTRUMENTS - Iris Scissors, Curved, Sharp/Sharp, 4.5\" (DROP SHIP ONLY)",
           "price": 87.75,
           "vendor": "Primis",
           "brand": "Sklar",
@@ -191,6 +201,7 @@
         },
         {
           "id": "sklar_iris_scissors_curved_3_5",
+          "name": "SKLAR REUSEABLE SURGICAL INSTRUMENTS - Iris Scissors, Curved, Sharp/Sharp, 3.5\" (DROP SHIP ONLY)",
           "price": 92.76,
           "vendor": "Primis",
           "brand": "Sklar",
@@ -207,6 +218,7 @@
         },
         {
           "id": "sklar_iris_scissors_straight_4_5",
+          "name": "SKLAR REUSEABLE SURGICAL INSTRUMENTS - Iris Scissors, Straight, Sharp/Sharp, 4.5\" (DROP SHIP ONLY)",
           "price": 78.57,
           "vendor": "Primis",
           "brand": "Sklar",
@@ -223,6 +235,7 @@
         },
         {
           "id": "sklar_iris_scissors_straight_3_5",
+          "name": "SKLAR REUSEABLE SURGICAL INSTRUMENTS - Iris Scissors, Straight, Sharp/Sharp, 3.5\" (DROP SHIP ONLY)",
           "price": 88.68,
           "vendor": "Primis",
           "brand": "Sklar",
@@ -247,6 +260,7 @@
       "products": [
         {
           "id": "bionix_disposable_nasal_speculum_20bx",
+          "name": "BIONIX DISPOSABLE NASAL SPECULUM - Disposable Nasal Speculum, 20/bx (US Only)",
           "price": 34.39,
           "vendor": "Primis",
           "brand": "Bionix",
@@ -263,6 +277,7 @@
         },
         {
           "id": "fao_triple_antibiotic_ointment_144bx",
+          "name": "FIRST AID ONLY/ACME UNITED ANTISEPTICS, CREAMS & OINTMENTS - Triple Antibiotic Ointment, 144/bx",
           "price": 23.12,
           "vendor": "Primis",
           "brand": "First Aid Only / Acme United",
@@ -279,6 +294,7 @@
         },
         {
           "id": "medline_or_scissors_sharp_blunt_4_5_sterile",
+          "name": "SCISSORS OR SHARP/BLUNT 4.5 STERILE",
           "price": 3.29,
           "vendor": "Medline",
           "brand": "MEDLINE",

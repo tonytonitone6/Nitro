@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue';
+import { ref, computed, onMounted, watch, nextTick } from 'vue';
 import useChatRoom from './hooks';
+import ProductCard from '../../components/ProductCard/ProductCard.vue';
 
 const props = withDefaults(
   defineProps<{
@@ -58,7 +59,8 @@ const scrollToBottom = () => {
 
 watch(
   () => messages.value.length,
-  () => {
+  async () => {
+    await nextTick();
     const elem = scrollEl.value;
     if (!elem) return;
 
@@ -74,63 +76,84 @@ onMounted(() => {
 });
 </script>
 <template>
-  <section v-if="isOpen" :style="panelStyle">
-    <header>
-      <div class="header-content">
-        <div class="brand">
-          <span class="logo">N</span>
-          <span class="title">Nitra AI</span>
-        </div>
-        <span>Hi there,How can we help? </span>
-      </div>
-      <span class="close-btn" @click="handleClose">
-        <i class="fa-solid fa-xmark"></i>
-      </span>
-    </header>
-    <main ref="scrollEl" class="chat-body">
-      <div
-        v-for="message in messages"
-        :key="message.message_id || Math.random()"
-        :class="['message', message.sender_id === 'user' ? 'message-user' : 'message-assistant']"
-      >
-        <div class="message-content">
-          {{ message.question }}
-        </div>
-        <div class="message-timestamp">
-          {{ new Date(message.timestamp ?? new Date()).toLocaleTimeString() }}
-        </div>
-      </div>
-
-      <!-- Loading indicator -->
-      <div v-if="isProcessingMessage" class="message message-assistant loading-message">
-        <div class="message-content loading-content">
-          <div class="typing-indicator">
-            <span></span>
-            <span></span>
-            <span></span>
+  <transition name="fade">
+    <section v-if="isOpen" :style="panelStyle">
+      <header>
+        <div class="header-content">
+          <div class="brand">
+            <span class="logo">
+              <img src="/icons/logo.svg" width="46px" height="23px" />
+            </span>
+            <span class="title">Nitra AI</span>
+            <span class="logo">
+              <img src="/icons/duotone.svg" width="24px" height="24px" />
+            </span>
           </div>
-          <span class="loading-text">AI is typing...</span>
+          <span>Hi there,How can we help? </span>
         </div>
-      </div>
-    </main>
-    <footer class="chat-footer">
-      <div class="input-wrap">
-        <input
-          class="input"
-          type="text"
-          v-model="draft"
-          placeholder="Say something..."
-          @keydown.enter="send"
-        />
-        <button class="icon-btn" title="Attach">
-          <i class="fa-solid fa-paperclip"></i>
-        </button>
-        <button class="icon-btn" title="Send" @click="send">
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </div>
-    </footer>
-  </section>
+        <span class="close-btn" @click="handleClose">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </header>
+      <main ref="scrollEl" class="chat-body">
+        <div
+          v-for="message in messages"
+          :key="message.message_id || Math.random()"
+          :class="['message', message.sender_id === 'user' ? 'message-user' : 'message-assistant']"
+        >
+          <div class="message-content">
+            {{ message.question }}
+          </div>
+          <div
+            v-if="message.products && message.products.length > 0"
+            class="products-container-wrap"
+          >
+            <div class="products-container" :style="{ width: `${props.panelWidth - 32}px` }">
+              <ProductCard
+                v-for="product in message.products"
+                :key="product.id"
+                :product="product"
+              />
+            </div>
+          </div>
+          <div class="message-timestamp">
+            {{ new Date(message.timestamp ?? new Date()).toLocaleTimeString() }}
+          </div>
+        </div>
+
+        <!-- Loading indicator -->
+        <div v-if="isProcessingMessage" class="message message-assistant loading-message">
+          <div class="message-content loading-content">
+            <span class="loading-text">Thinking</span>
+            <div class="typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="chat-footer">
+        <div class="input-wrap">
+          <input
+            class="input"
+            type="text"
+            v-model="draft"
+            placeholder="Say something..."
+            @keydown.enter="send"
+          />
+          <div class="icon-btn-container">
+            <button class="icon-btn attach-btn" title="Attach">
+              <i class="fa-solid fa-paperclip"></i>
+            </button>
+            <button class="icon-btn send-btn" title="Send" @click="send">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </transition>
 </template>
 
 <style lang="scss" scoped>
@@ -146,10 +169,21 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.products-container-wrap {
+  margin-top: 16px;
+}
+
+.products-container {
+  padding: 1px;
+  display: flex;
+  overflow-x: auto;
+  gap: 5px;
+}
+
 header {
   position: relative;
   background: $teal-700;
-  color: white;
+  color: #fff;
   padding: 18px 20px;
   border-radius: 8px 8px 0 0;
 
@@ -161,6 +195,13 @@ header {
 
   .brand {
     display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: 700;
   }
 
   .close-btn {
@@ -174,9 +215,12 @@ header {
 .chat-body {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100%;
   padding: 32px 20px 0px;
   scroll-behavior: smooth;
+  background: #fff;
 }
 
 .chat-footer {
@@ -188,7 +232,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: white;
+  background: #fff;
   border-radius: 8px;
   padding: 22px 20px;
 }
@@ -203,8 +247,34 @@ header {
   }
 }
 
+.icon-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .icon-btn {
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-600;
+
+  &.attach-btn {
+    opacity: 0.4;
+  }
+
+  &.send-btn {
+    background: $teal-700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #fff;
+  }
 }
 
 // Message styles
@@ -298,6 +368,20 @@ header {
   font-size: 13px;
   color: $gray-600;
   font-style: italic;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease;
+  transform-origin: bottom right; /* 錨在右下角放大 */
 }
 
 @keyframes typing {

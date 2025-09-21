@@ -1,22 +1,5 @@
 import { ref, watch } from 'vue';
-// import { queryFaqsByQuestion } from '../../../utils/query';
-type SenderId = 'user' | 'assistant';
-
-type Message = {
-  message_id: string;
-  conversation_id: string;
-  sender_id: SenderId;
-  timestamp: string;
-  question: string;
-  answer_id: string | null;
-  reply_to?: string | null;
-};
-
-type Status = {
-  isLoading: boolean;
-  error: Error | null;
-  isInitialized: boolean;
-};
+import type { Message, Status, ChatResponse } from 'src/modules/ChatRoom/Chat';
 
 const useChatRoom = ({ initialMessage = '' }: { initialMessage: string }) => {
   const conversationId = ref<string | null>(null);
@@ -27,7 +10,6 @@ const useChatRoom = ({ initialMessage = '' }: { initialMessage: string }) => {
     error: null,
     isInitialized: false,
   });
-  // const pendingQuestionIds = new Set<string>(); // TODO: Use for tracking pending messages
 
   const addMessage = (message: string) => {
     const defaultMessage: Partial<Message> = {
@@ -63,7 +45,6 @@ const useChatRoom = ({ initialMessage = '' }: { initialMessage: string }) => {
   const createConversation = () => {
     if (conversationId.value) return;
     conversationId.value = crypto.randomUUID?.() ?? String(Date.now());
-    // status.value.isInitialized = true;
 
     if (!status.value.isInitialized) {
       const message = createAssistantMessage(initialMessage, {});
@@ -91,30 +72,32 @@ const useChatRoom = ({ initialMessage = '' }: { initialMessage: string }) => {
         try {
           const rawData = await fetch('/data.json');
           const data = await rawData.json();
-          console.log(data, 'data');
 
+          const [answer] = data.data.filter(
+            (item: ChatResponse) => item.question === question.question,
+          );
           // Simulate AI processing time
           await new Promise((resolve) => setTimeout(resolve, 1000 + Math.random() * 2000));
 
-          // Create AI response
-          const assistantMessage = createAssistantMessage(
-            'This is a placeholder response. The AI is processing your question...',
-            {
+          if (answer) {
+            // Create AI response
+            const assistantMessage = createAssistantMessage(answer.answer, {
               reply_to: question.message_id ?? null,
               message_id: crypto.randomUUID?.() ?? String(Date.now()),
-            },
-          );
-          messages.value = [...messages.value, assistantMessage];
+              products: answer.products,
+            });
+            messages.value = [...messages.value, assistantMessage];
 
-          // Mark the user question as answered
-          const questionIndex = messages.value.findIndex(
-            (m) => m.message_id === question.message_id,
-          );
-          if (questionIndex !== -1) {
-            messages.value[questionIndex] = {
-              ...messages.value[questionIndex],
-              answer_id: assistantMessage.message_id,
-            };
+            // Mark the user question as answered
+            const questionIndex = messages.value.findIndex(
+              (m) => m.message_id === question.message_id,
+            );
+            if (questionIndex !== -1) {
+              messages.value[questionIndex] = {
+                ...messages.value[questionIndex],
+                answer_id: assistantMessage.message_id,
+              };
+            }
           }
         } catch (error) {
           console.error(error);
