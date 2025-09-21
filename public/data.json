@@ -1,0 +1,300 @@
+{
+  "data": [
+    {
+      "id": "faq_gloves_compare",
+      "question": "Can you help me compare gloves products from different vendors?",
+      "answer": "Comparison of glove products across vendors with prices, vendors, brands, product links, and images.",
+      "products": [
+        {
+          "id": "glove_sensicare_pi_green_6_0",
+          "price": 452.59,
+          "vendor": "Medline",
+          "brand": "MEDLINE",
+          "links": {
+            "product_url": "https://nitramart.com/products/glove-surg-sensicare-pi-grn-lf-pf-6-0?variant=46225236558067",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Medline-D1200012663451640_090320241158-MSG9260_xl_9988e03f-82ba-4205-af96-f6db649d5821.png?v=1743633528"
+          },
+          "attributes": {
+            "size": "6.0",
+            "type": "surgical glove",
+            "material": "polyisoprene"
+          },
+          "tags": ["glove", "surgical", "powder-free", "Medline", "SensiCare"]
+        },
+        {
+          "id": "ansell_micro_touch_nitratex_medium",
+          "price": 184.6,
+          "vendor": "Primis",
+          "brand": "Ansell",
+          "links": {
+            "product_url": "https://nitramart.com/products/ansell-micro-touch-nitratex-sterile-exam-gloves-exam-gloves-sterile-medium-pairs-50-prbx-4-bxcs-us-only?variant=46876614033651",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-ANS_6034151-6034152_xl_64355e7f-802e-4a13-85ad-550ef50d145a.png?v=1752179542"
+          },
+          "attributes": {
+            "size": "Medium",
+            "type": "sterile exam glove",
+            "material": "nitrile"
+          },
+          "tags": ["glove", "exam", "sterile", "Ansell", "Nitratex"]
+        },
+        {
+          "id": "ventyv_select_5_0_latex_manatee_xl",
+          "price": 58.91,
+          "vendor": "Primis",
+          "brand": "VENTYV",
+          "links": {
+            "product_url": "https://nitramart.com/products/ventyv-select-5-0-natural-latex-exam-gloves-manatee-glove-exam-latex-powder-free-pf-textured-natural-white-x-large-90bx-10-bxcs-continental-us-only?variant=46878096752883",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-VNT_10125103-10125103_xl_82fd47d6-df20-4037-aafe-76c015d62858.png?v=1752199253"
+          },
+          "attributes": {
+            "size": "X-Large",
+            "type": "exam glove",
+            "material": "latex"
+          },
+          "tags": ["glove", "exam", "latex", "powder-free", "VENTYV"]
+        },
+        {
+          "id": "cardinal_positive_touch_latex_medium",
+          "price": 128.93,
+          "vendor": "Primis",
+          "brand": "Cardinal Health",
+          "links": {
+            "product_url": "https://nitramart.com/products/cardinal-health-postive-touch-latex-exam-gloves-glove-latex-exam-textured-powderless-medium-100bx-10-bxcs-continental-us-only?variant=46877429891315",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-CHC_8840-8842_xl_b0055fbe-626d-44e8-a7cd-b4387a6e6ea8.png?v=1752193942"
+          },
+          "attributes": {
+            "size": "Medium",
+            "type": "exam glove",
+            "material": "latex"
+          },
+          "tags": ["glove", "exam", "latex", "Cardinal Health"]
+        },
+        {
+          "id": "curad_pf_lg",
+          "price": 15.59,
+          "vendor": "Medline",
+          "brand": "MEDLINE",
+          "links": {
+            "product_url": "https://nitramart.com/products/glove-exam-latex-curad-pf-lg?variant=46224601514227",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Medline-D1200012663304682_260820230204-CUR8106H_xl_bd605d5a-c7e8-4222-840d-ddf0d9900d46.png?v=1743623837"
+          },
+          "attributes": {
+            "size": "Large",
+            "type": "exam glove",
+            "material": "latex"
+          },
+          "tags": ["glove", "exam", "latex", "Curad", "powder-free"]
+        }
+      ],
+      "timestamp": "2025-09-17T06:24:15.453Z"
+    },
+    {
+      "id": "faq_ultrasound_gel_popular",
+      "question": "What are the most popular ultrasound gel products purchased by practices like mine?",
+      "answer": "Selection of ultrasound gel products with typical sizes and prices.",
+      "products": [
+        {
+          "id": "aquasonic_100_1l",
+          "price": 12.5,
+          "vendor": "Parker Laboratories",
+          "brand": "Aquasonic",
+          "links": {
+            "product_url": "https://example.com/products/aquasonic-100-ultrasound-gel-1-liter",
+            "image_url": "https://example.com/images/aquasonic-100-ultrasound-gel-1-liter.png"
+          },
+          "attributes": {
+            "size": "1 L",
+            "type": "ultrasound gel",
+            "material": ""
+          },
+          "tags": ["ultrasound", "gel", "Aquasonic", "1L"]
+        },
+        {
+          "id": "ecovue_250ml",
+          "price": 10.0,
+          "vendor": "HR Pharmaceuticals",
+          "brand": "EcoVue",
+          "links": {
+            "product_url": "https://example.com/products/ecovue-ultrasound-gel-250ml",
+            "image_url": "https://example.com/images/ecovue-ultrasound-gel-250ml.png"
+          },
+          "attributes": {
+            "size": "250 mL",
+            "type": "ultrasound gel",
+            "material": ""
+          },
+          "tags": ["ultrasound", "gel", "EcoVue", "250mL"]
+        },
+        {
+          "id": "therapro_5l",
+          "price": 15.0,
+          "vendor": "TheraPro",
+          "brand": "TheraPro",
+          "links": {
+            "product_url": "https://example.com/products/therapro-ultrasound-gel-5-liter",
+            "image_url": "https://example.com/images/therapro-ultrasound-gel-5-liter.png"
+          },
+          "attributes": {
+            "size": "5 L",
+            "type": "ultrasound gel",
+            "material": ""
+          },
+          "tags": ["ultrasound", "gel", "TheraPro", "5L"]
+        }
+      ],
+      "timestamp": "2025-09-17T06:27:32.006Z"
+    },
+    {
+      "id": "faq_lowest_price_antibiotic_ointments",
+      "question": "What product has the lowest price available for antibiotic ointments?",
+      "answer": "Lowest priced related item in the antibiotic/antiseptic category as provided.",
+      "products": [
+        {
+          "id": "fao_pvp_iodine_swabs_100bx",
+          "price": 51.64,
+          "vendor": "Primis",
+          "brand": "First Aid Only / Acme United",
+          "links": {
+            "product_url": "https://nitramart.com/products/first-aid-onlyacme-united-antiseptics-creams-and-ointments-pvp-iodine-swabs-100bx-drop-ship-only-dollar150-minimum-order?variant=46877187965171",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-FAO_10-400-10-400_xl_1221f0f3-8d2b-4c5e-8acf-e4546ed0fc75.png?v=1752191072"
+          },
+          "attributes": {
+            "size": "100/bx",
+            "type": "antiseptic swab",
+            "material": ""
+          },
+          "tags": ["antiseptic", "swabs", "first aid"]
+        }
+      ],
+      "timestamp": "2025-09-17T06:43:23.672Z"
+    },
+    {
+      "id": "faq_surgical_scissors_compare",
+      "question": "How do prices for surgical scissors compare across vendors?",
+      "answer": "Comparison of Iris scissors variants across sizes and shapes.",
+      "products": [
+        {
+          "id": "sklar_iris_scissors_curved_4_5",
+          "price": 87.75,
+          "vendor": "Primis",
+          "brand": "Sklar",
+          "links": {
+            "product_url": "https://nitramart.com/products/sklar-reuseable-surgical-instruments-iris-scissors-curved-sharpsharp-4-5-drop-ship-only?variant=46877905879283",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-SKL_47-1245-47-1245_xl_1d8fd125-9246-444f-bbe5-676d2c96ed0f.png?v=1752195895"
+          },
+          "attributes": {
+            "size": "4.5 in",
+            "type": "iris scissors (curved)",
+            "material": ""
+          },
+          "tags": ["scissors", "surgical", "iris", "curved"]
+        },
+        {
+          "id": "sklar_iris_scissors_curved_3_5",
+          "price": 92.76,
+          "vendor": "Primis",
+          "brand": "Sklar",
+          "links": {
+            "product_url": "https://nitramart.com/products/sklar-reuseable-surgical-instruments-iris-scissors-curved-sharpsharp-3-5-drop-ship-only?variant=46877905748211",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-SKL_47-1235-47-1235_xl_b874d725-81d2-46e1-b281-2a883c732bcd.png?v=1752195865"
+          },
+          "attributes": {
+            "size": "3.5 in",
+            "type": "iris scissors (curved)",
+            "material": ""
+          },
+          "tags": ["scissors", "surgical", "iris", "curved"]
+        },
+        {
+          "id": "sklar_iris_scissors_straight_4_5",
+          "price": 78.57,
+          "vendor": "Primis",
+          "brand": "Sklar",
+          "links": {
+            "product_url": "https://nitramart.com/products/sklar-reuseable-surgical-instruments-iris-scissors-straight-sharpsharp-4-5-drop-ship-only?variant=46877905649907",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-SKL_47-1145-47-1145_xl_5f3c3e74-60e1-4d7a-9c6c-7372676f8fec.png?v=1752195940"
+          },
+          "attributes": {
+            "size": "4.5 in",
+            "type": "iris scissors (straight)",
+            "material": ""
+          },
+          "tags": ["scissors", "surgical", "iris", "straight"]
+        },
+        {
+          "id": "sklar_iris_scissors_straight_3_5",
+          "price": 88.68,
+          "vendor": "Primis",
+          "brand": "Sklar",
+          "links": {
+            "product_url": "https://nitramart.com/products/sklar-reuseable-surgical-instruments-iris-scissors-straight-sharpsharp-3-5-drop-ship-only?variant=46877905584371",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-SKL_47-1135-47-1135_xl_66298de8-514d-41b8-9cc2-95452787b556.png?v=1752195914"
+          },
+          "attributes": {
+            "size": "3.5 in",
+            "type": "iris scissors (straight)",
+            "material": ""
+          },
+          "tags": ["scissors", "surgical", "iris", "straight"]
+        }
+      ],
+      "timestamp": "2025-09-17T06:44:09.138Z"
+    },
+    {
+      "id": "faq_cheaper_mask_substitutes",
+      "question": "Can you find cheaper substitutes for my masks purchases?",
+      "answer": "Cost-effective alternatives across related medical supply categories.",
+      "products": [
+        {
+          "id": "bionix_disposable_nasal_speculum_20bx",
+          "price": 34.39,
+          "vendor": "Primis",
+          "brand": "Bionix",
+          "links": {
+            "product_url": "https://nitramart.com/products/bionix-disposable-nasal-speculum-disposable-nasal-speculum-20bx-us-only-products-cannot-be-sold-on-amazon-com-through-fulfillment-on-amazon-com-or-to-any-other-vendor-who-intends-to-sell-on-amazon-com-or-any-3rd-party-site?variant=46878191321331",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-BNX_9878-9878_xl_20aeb444-5a39-46de-9534-07a116f5d1a6.png?v=1752200735"
+          },
+          "attributes": {
+            "size": "20/bx",
+            "type": "nasal speculum (disposable)",
+            "material": ""
+          },
+          "tags": ["nasal", "speculum", "disposable"]
+        },
+        {
+          "id": "fao_triple_antibiotic_ointment_144bx",
+          "price": 23.12,
+          "vendor": "Primis",
+          "brand": "First Aid Only / Acme United",
+          "links": {
+            "product_url": "https://nitramart.com/products/first-aid-onlyacme-united-antiseptics-creams-and-ointments-triple-antibiotic-ointment-144bx-drop-ship-only-dollar150-minimum-order?variant=46877347217651",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Primis-FAO_M462-144-M462-144_xl_793f7a4f-1445-491e-b2fe-751c5dd0af99.png?v=1752192684"
+          },
+          "attributes": {
+            "size": "144/bx",
+            "type": "antibiotic ointment packets",
+            "material": ""
+          },
+          "tags": ["antibiotic", "ointment", "first aid"]
+        },
+        {
+          "id": "medline_or_scissors_sharp_blunt_4_5_sterile",
+          "price": 3.29,
+          "vendor": "Medline",
+          "brand": "MEDLINE",
+          "links": {
+            "product_url": "https://nitramart.com/products/scissors-or-sharpblunt-4-5-sterile?variant=46224698900723",
+            "image_url": "https://cdn.shopify.com/s/files/1/0708/8390/1683/files/Medline-D12000128291851_090320241155-DYNJ04053H_xl_ed5c9505-bb41-4726-828b-94bf0d110483.png?v=1743624720"
+          },
+          "attributes": {
+            "size": "4.5 in",
+            "type": "OR scissors (sterile)",
+            "material": ""
+          },
+          "tags": ["scissors", "sterile", "single-use?"]
+        }
+      ],
+      "timestamp": "2025-09-17T06:48:27.919Z"
+    }
+  ]
+}
