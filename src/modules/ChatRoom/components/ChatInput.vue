@@ -68,7 +68,7 @@ const handleSend = () => {
   </footer>
 </template>
 <style lang="scss" scoped>
-@import '../../../css/quasar.variables.scss';
+@import 'src/css/quasar.variables.scss';
 
 .chat-footer {
   flex: 0 0 auto;

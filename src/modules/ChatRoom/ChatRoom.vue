@@ -26,8 +26,7 @@ const props = withDefaults(
 );
 const { t } = useI18nHelpers();
 const { draft, clear } = useChatInput();
-const innerOpen = ref(false);
-const isOpen = computed(() => props.open || innerOpen.value);
+const isOpen = computed(() => props.open);
 
 const panelStyle = computed(() => ({
   position: 'absolute' as const,
