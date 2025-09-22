@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import Button from '../components/BaseButton/BaseButton.vue';
-import ChatRoom from '../modules/ChatRoom/ChatRoom.vue';
+import Button from 'src/components/BaseButton/BaseButton.vue';
+import ChatRoom from 'src/modules/ChatRoom/ChatRoom.vue';
+import useI18nHelpers from 'src/hooks/useI18n';
+
 const toggle = ref(false);
+const { t } = useI18nHelpers();
 
 function handleToggle() {
   toggle.value = !toggle.value;
 }
-
-const closeChatRoom = () => {
-  toggle.value = false;
-};
 </script>
 <template>
   <div class="main-layout">
-    <ChatRoom :open="toggle" @close="closeChatRoom" />
+    <ChatRoom :open="toggle" @close="handleToggle" />
     <div class="toggle-button">
       <Button
         size="md"
         variant="primary"
-        label="Ask Natria AI"
+        :label="t('button.common.welcome')"
         @click="handleToggle"
         :style="{ background: '#FB7429', color: '#fff' }"
       >

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CSSProperties } from 'vue';
-import type { ButtonVariant, ButtonSize } from './BaseButton.types';
+import type { ButtonVariant, ButtonSize } from './BaseButton.type';
 
 const props = defineProps<{
   label?: string;
